@@ -1,0 +1,23 @@
+
+@media screen and (max-width: 850px) {
+    
+    #heading {
+        font-size: 25px;
+    }
+    #image {
+        margin-left: 0px;
+    }
+    #toolbar {
+        width: 200px;
+
+    }
+    #profile {
+        width: 200px;
+
+    }
+    #userName {
+        width: 110px;
+        margin: 0 10px;
+
+    }
+}

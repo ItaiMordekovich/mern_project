@@ -2,68 +2,70 @@ import { makeStyles } from '@material-ui/core/styles';
 import { deepPurple } from '@material-ui/core/colors';
 
 export default makeStyles((theme) => ({
-  mainContainer: {
+  appBar: {
+    // width: 820,
     borderRadius: 15,
     margin: '30px 0',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '10px 50px',
+    background: 'rgba(0, 0, 0, 0.2)',
+    border: '2px #DCCA87 solid',
+    padding: '10px 0px',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
   },
   heading: {
-    color: 'rgba(0,183,255, 1)',
+    color: '#DCCA87',
+    fontFamily: 'Cormorant Upright',
     textDecoration: 'none',
   },
   image: {
-    marginLeft: '15px',
+    marginLeft: '150px',
+    marginTop: '5px',
+  },
+  image2: {
+    marginLeft: '5px',
+    marginTop: '5px',
   },
   toolbar: {
     display: 'flex',
     justifyContent: 'flex-end',
     width: '400px',
+    [theme.breakpoints.down('sm')]: {
+      width: 'auto',
+    },
   },
   profile: {
     display: 'flex',
     justifyContent: 'space-between',
     width: '400px',
+    alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      width: 'auto',
+      marginTop: 20,
+      justifyContent: 'center',
+    },
+  },
+  logout: {
+    marginLeft: '20px',
   },
   userName: {
     display: 'flex',
     alignItems: 'center',
+    textAlign: 'center',
+    width: '260px',
+    margin: '0 10px',
   },
   brandContainer: {
     display: 'flex',
     alignItems: 'center',
   },
-  smMargin: {
-    margin: theme.spacing(1),
-  },
   purple: {
     color: theme.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
   },
-  [theme.breakpoints.down('sm')]: {
-    appBar: {
-      padding: '10px 20px',
-    },
-    heading: {
-      display: 'none',
-    },
-    userName: {
-      display: 'none',
-    },
-    image: {
-      marginLeft: '5px',
-    },
-    toolbar: {
-      display: 'flex',
-      justifyContent: 'flex-end',
-      width: '160px',
-    },
-  },
-
-  actionDiv: {
-    textAlign: 'center',
-  },
+  
 }));
